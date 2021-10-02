@@ -1,22 +1,19 @@
 import React from 'react';
 // import sections
-import Hero from '../components/sections/Hero';
-import FeaturesTiles from '../components/sections/FeaturesTiles';
-import FeaturesSplit from '../components/sections/FeaturesSplit';
-import Testimonial from '../components/sections/Testimonial';
-import Cta from '../components/sections/Cta';
+import AudioPlayer from "react-h5-audio-player";
+import 'react-h5-audio-player/lib/styles.css';
 
 const Test = () => {
 
 
     return (
-        <>
-            <Hero className="illustration-section-01" />
-            <FeaturesTiles />
-            <FeaturesSplit invertMobile topDivider imageFill className="illustration-section-02" />
-            <Testimonial topDivider />
-            <Cta split />
-        </>
+        <div style={{ marginTop: '10%'}}>
+            <AudioPlayer
+                autoPlay
+                src="/test/Yeu-La-Cuoi-Phat-Ho.mp3"
+                onPlay={e => console.log("onPlay")}
+            />
+        </div>
     );
 }
 
